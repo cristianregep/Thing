@@ -19,32 +19,32 @@
         android:src="@drawable/forum" />
 
     <Button
-        android:id="@+id/buttonok"
+        android:id="@+id/button_directions"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:drawableLeft="@drawable/icon_button"
         android:text="Directions" />
 
    	<Button 
-    	android:id="@+id/buttonok" 
+    	android:id="@+id/button_food_drink" 
     	android:layout_width="match_parent" 
     	android:layout_height="wrap_content"
     	android:drawableLeft="@drawable/icon_button"
     	android:text="Food and Drink"/>
     <Button 
-    	android:id="@+id/buttonok" 
+    	android:id="@+id/button_hotels" 
     	android:layout_width="match_parent" 
     	android:layout_height="wrap_content"
     	android:drawableLeft="@drawable/icon_button"
     	android:text="Hotels"/>
     <Button 
-    	android:id="@+id/buttonok" 
+    	android:id="@+id/button_practical_info" 
     	android:layout_width="match_parent" 
     	android:layout_height="wrap_content"
     	android:drawableLeft="@drawable/icon_button"
     	android:text="Pratical Information"/>
    	<Button 
-    	android:id="@+id/buttonok" 
+    	android:id="@+id/button_planner" 
     	android:layout_width="match_parent" 
     	android:layout_height="wrap_content"
     	android:drawableLeft="@drawable/icon_button"
