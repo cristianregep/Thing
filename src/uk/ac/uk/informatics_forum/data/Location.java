@@ -1,5 +1,8 @@
 package uk.ac.uk.informatics_forum.data;
 
+import android.text.Html;
+import android.text.Spanned;
+
 public abstract class Location {
 	protected String name;
 	protected String description;
@@ -25,5 +28,9 @@ public abstract class Location {
 	}
 	
 	public abstract String toString();
+	
+	public Spanned toHtml(){
+		return Html.fromHtml("<u>"+name+"</u>"+"<br/><br/>"+description);
+	}
 	
 }

@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.RatingBar;
+import android.widget.TextView;
+
 import java.util.ArrayList;
 
 public abstract class LocationList extends ListActivity {
@@ -16,7 +18,8 @@ public abstract class LocationList extends ListActivity {
 
 	@Override
 	public void onCreate(Bundle icicle) {
-		super.onCreate(icicle);	
+		super.onCreate(icicle);
+		setContentView(R.layout.locations);
 		setListAdapter(new RatingAdapter(locations));
 	}
 
@@ -27,43 +30,36 @@ public abstract class LocationList extends ListActivity {
 	class RatingAdapter extends ArrayAdapter<Location> {
 
 		RatingAdapter(ArrayList<Location> list) {
-			super(LocationList.this, R.layout.row, R.id.label, list);
+			super(LocationList.this, R.layout.location, R.id.label, list);
 		}
 
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View row = super.getView(position, convertView, parent);
-			ViewHolder holder = (ViewHolder) row.getTag();
+			RatingBar rater = (RatingBar) row.findViewById(R.id.rate);
+			TextView label = (TextView) row.findViewById(R.id.label);
 
-			if (holder == null) {
-				holder = new ViewHolder(row);
-				row.setTag(holder);
-				
-				// Listener for when rating bar is pressed 
-				RatingBar.OnRatingBarChangeListener l = new RatingBar.OnRatingBarChangeListener() {
-					public void onRatingChanged(RatingBar ratingBar,
-							float rating, boolean fromTouch) {						
-						Integer myPosition = (Integer) ratingBar.getTag();
-						Location location = getModel(myPosition);						
-						//update rating on location
-						location.setRating(rating);		
-					}
-				};
-				
-				
-				holder.rate.setOnRatingBarChangeListener(l);
-			}
-			
+			// Listener for when rating bar is pressed
+			RatingBar.OnRatingBarChangeListener l = new RatingBar.OnRatingBarChangeListener() {
+				public void onRatingChanged(RatingBar ratingBar, float rating,
+						boolean fromTouch) {
+					Integer myPosition = (Integer) ratingBar.getTag();
+					Location location = getModel(myPosition);
+					// update rating on location
+					location.setRating(rating);
+				}
+			};
+
+			rater.setOnRatingBarChangeListener(l);
+
 			// get location for position
-			Location location = getModel(position);	
-			
-			
-			
-			holder.rate.setTag(new Integer(position));
-			
+			Location location = getModel(position);
+
+			label.setText(location.toHtml());
+			rater.setTag(new Integer(position));
 			// set rating according to location for value
-			holder.rate.setRating(location.getRating());
+			rater.setRating(location.getRating());
 			return (row);
 		}
 	}
-	
+
 }

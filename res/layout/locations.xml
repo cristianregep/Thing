@@ -10,12 +10,10 @@
         android:layout_height="wrap_content"
         android:scaleType="center"
         android:src="@drawable/top_banner" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hotels"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+   	<ListView
+   	    android:id="@android:id/list"
+   	    android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="center" />    
 
 </LinearLayout>

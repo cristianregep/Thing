@@ -40,7 +40,7 @@ public class Index extends Activity {
     	Button hotels = (Button) findViewById(R.id.button_hotels);
     	hotels.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), Hotels.class);
+                Intent myIntent = new Intent(view.getContext(), HotelList.class);
                 startActivityForResult(myIntent, 0);
             }
         });
