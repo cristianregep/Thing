@@ -16,9 +16,16 @@ public abstract class Location {
 		return description;
 	}
 	
-	public int getStars(){
-		return stars;
+	public float getRating(){
+		return (float)stars;
 	}
 	
+	public void setRating(float rating){
+		stars = (int)rating;
+	}
+	
+	public String toString(){
+		return name;
+	}
 	
 }

@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World, InformaticsForumActivity!</string>
     <string name="app_name">Informatics Forum App</string>
+    
+   	<string name="taxi_text">This text uses <b>bold</b> and <i>italics</i> by using inline tags such as within the string file.</string>
 
 </resources>

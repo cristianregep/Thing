@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class DataManager {
 	private static DataManager currentInstance = null;
-	private ArrayList<Hotel> hotels;
-	private ArrayList<FoodLocation> foodLocations;
+	private ArrayList<Location> hotels;
+	private ArrayList<Location> foodLocations;
 	
 	private DataManager(){
-		hotels = new ArrayList<Hotel>();
-		foodLocations = new ArrayList<FoodLocation>();
+		hotels = new ArrayList<Location>();
+		foodLocations = new ArrayList<Location>();
 		
 		
 		hotels.add(new Hotel("Hotel 1", "Hotel 1 Description", 5));
@@ -21,11 +21,7 @@ public class DataManager {
 		foodLocations.add(new FoodLocation("Food 3", "Food 3 Description", 5));
 	}
 	
-	public Hotel[] getHotels(){
-		Hotel[] hotels = new Hotel[this.hotels.size()];
-		for(int i=0; i<this.hotels.size(); i++){
-			hotels[i] = this.hotels.get(i);
-		}
+	public ArrayList<Location> getHotels(){	
 		return hotels;
 	}
 	

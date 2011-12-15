@@ -1,6 +1,7 @@
 package uk.ac.ed.informatics_forum.activities;
 
 import uk.ac.ed.informatics_forum.R;
+import uk.ac.ed.informatics_forum.custom_elements.RateListDemo;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -30,7 +31,7 @@ public class Index extends Activity {
     	Button food_drink = (Button) findViewById(R.id.button_food_drink);
     	food_drink.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), FoodAndDrink.class);
+                Intent myIntent = new Intent(view.getContext(), RateListDemo.class);
                 startActivityForResult(myIntent, 0);
             }
         });
