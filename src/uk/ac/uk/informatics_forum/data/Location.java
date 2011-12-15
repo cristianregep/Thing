@@ -1,9 +1,9 @@
 package uk.ac.uk.informatics_forum.data;
 
 public abstract class Location {
-	private String name;
-	private String description;
-	private int stars;
+	protected String name;
+	protected String description;
+	protected int stars;
 	public Location(String name, String description, int stars){
 		this.name = name;
 		this.description = description;
@@ -24,8 +24,6 @@ public abstract class Location {
 		stars = (int)rating;
 	}
 	
-	public String toString(){
-		return name;
-	}
+	public abstract String toString();
 	
 }

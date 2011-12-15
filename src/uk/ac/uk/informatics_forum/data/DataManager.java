@@ -25,6 +25,10 @@ public class DataManager {
 		return hotels;
 	}
 	
+	public ArrayList<Location> getFoodLocations(){
+		return foodLocations;
+	}
+	
 	public static DataManager getCurrentInstance(){
 		if(currentInstance == null){
 			currentInstance = new DataManager();

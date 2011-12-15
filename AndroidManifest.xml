@@ -22,7 +22,8 @@
         <activity android:name=".activities.Hotels"></activity>
         <activity android:name=".activities.PracticalInformation"></activity>
         <activity android:name=".activities.Planner"></activity>
-        <activity android:name=".custom_elements.RateListDemo"></activity>
+        <activity android:name=".custom_elements.LocationList"></activity>
+        <activity android:name=".custom_elements.HotelList"></activity>
     </application>
 
 </manifest>
