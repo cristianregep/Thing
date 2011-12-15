@@ -7,7 +7,7 @@ public class DataManager {
 	private ArrayList<Hotel> hotels;
 	private ArrayList<FoodLocation> foodLocations;
 	
-	public DataManager(){
+	private DataManager(){
 		hotels = new ArrayList<Hotel>();
 		foodLocations = new ArrayList<FoodLocation>();
 		
